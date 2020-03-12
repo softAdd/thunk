@@ -1,0 +1,73 @@
+*
+    box-sizing: border-box
+
+@font-face
+    font-family: 'Nunito'
+    font-style: normal
+    font-weight: 400
+    src: url(./fonts/Nunito-Regular.ttf)
+
+html, body
+    margin: 0
+    padding: 0
+    height: 100%
+
+#root
+    display: flex
+    flex-direction: column
+    font-family: 'Nunito', sans-serif
+    font-size: 16px
+
+.list
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 20px
+
+.list__items
+    height: 400px
+    width: 600px
+    max-width: 100%
+    margin: 0
+    padding-top: 10px
+    padding-bottom: 10px
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1)
+    overflow-y: auto
+    overflow-x: hidden
+
+.list__controls
+    display: flex
+    width: 600px
+    max-width: 100%
+    margin-top: 10px
+    padding: 5px 0
+
+    & button
+        flex-grow: 1
+
+        + button
+            margin-left: 10px
+
+.common-button
+    min-width: 100px
+    font-family: inherit
+    appearance: none
+    border: 0
+    border-radius: 5px
+    background: #4676d7
+    color: #fff
+    padding: 8px 16px
+    font-size: 1rem
+    cursor: pointer
+
+    &:hover
+        background: #1d49aa
+
+    &:focus
+        outline: none
+        box-shadow: 0 0 0 4px #cbd6ee
+
+    &[disabled]
+        color: #d2d5db
+        background: #6c7589
+        cursor: not-allowed
